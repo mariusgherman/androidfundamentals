@@ -7,11 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class HelloFragment extends Fragment {
 
-    private TextView helloLabel;
+    private Listener listener;
 
     @Nullable
     @Override
@@ -25,10 +24,15 @@ public class HelloFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        this.helloLabel = ((TextView) view.findViewById(R.id.hello_label));
+        view.findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.theseAreTheNumbers(10, 25);
+            }
+        });
     }
 
-    public void setLabel(String label) {
-        helloLabel.setText(label);
+    public void setListener(Listener listener) {
+        this.listener = listener;
     }
 }
