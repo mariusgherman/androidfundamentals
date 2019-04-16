@@ -11,16 +11,7 @@ import android.widget.TextView;
 
 public class HelloFragment extends Fragment {
 
-    private String label;
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            this.label = getArguments().getString("label", "Buuu!");
-        }
-    }
+    private TextView helloLabel;
 
     @Nullable
     @Override
@@ -34,6 +25,10 @@ public class HelloFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ((TextView) view.findViewById(R.id.hello_label)).setText(label);
+        this.helloLabel = ((TextView) view.findViewById(R.id.hello_label));
+    }
+
+    public void setLabel(String label) {
+        helloLabel.setText(label);
     }
 }

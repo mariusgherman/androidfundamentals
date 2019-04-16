@@ -10,13 +10,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Bundle bundle = new Bundle();
-        bundle.putString("label", "This is an activity label");
-        HelloFragment fragment = new HelloFragment();
-        fragment.setArguments(bundle);
-
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.frame, fragment, HelloFragment.class.getSimpleName())
+                .add(R.id.frame, new HelloFragment(), HelloFragment.class.getSimpleName())
                 .commit();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        HelloFragment fragment =
+                (HelloFragment) getSupportFragmentManager().findFragmentByTag(HelloFragment.class.getSimpleName());
+        fragment.setLabel("This is a method set label");
     }
 }
