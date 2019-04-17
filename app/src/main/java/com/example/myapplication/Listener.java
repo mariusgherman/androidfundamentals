@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 public interface Listener {
+    void showHelloFragment();
 
-    public void theseAreTheNumbers(int no1, int no2);
+    void showAnotherFragment();
 }

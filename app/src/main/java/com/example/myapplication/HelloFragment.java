@@ -7,10 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 public class HelloFragment extends Fragment {
-
-    private Listener listener;
 
     @Nullable
     @Override
@@ -27,12 +26,8 @@ public class HelloFragment extends Fragment {
         view.findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.theseAreTheNumbers(10, 25);
+                Toast.makeText(getActivity(), "Hello fragment", Toast.LENGTH_LONG).show();
             }
         });
-    }
-
-    public void setListener(Listener listener) {
-        this.listener = listener;
     }
 }
