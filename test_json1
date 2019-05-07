@@ -1,0 +1,12 @@
+[
+  {
+    "name": "John",
+    "surname": "Adams",
+    "address": "San Jose, CA"
+  },
+  {
+    "name": "Andy",
+    "surname": "Wilson",
+    "address": "New York, NY"
+  }
+]
