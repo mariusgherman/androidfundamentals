@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class HelloFragment extends Fragment {
 
+    private String message = "No initial state";
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -22,10 +24,15 @@ public class HelloFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        if (getArguments() != null) {
+            message = getArguments().getString("message");
+        }
+
         view.findViewById(R.id.hello_fragment_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Toast shown from fragment", Toast.LENGTH_LONG)
+                Toast.makeText(v.getContext(), message, Toast.LENGTH_LONG)
                         .show();
             }
         });

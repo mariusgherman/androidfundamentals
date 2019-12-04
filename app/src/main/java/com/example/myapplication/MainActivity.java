@@ -10,10 +10,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        HelloFragment fragment = new HelloFragment();
+        HelloFragment firstFragment = new HelloFragment();
+        Bundle firstBundle = new Bundle();
+        firstBundle.putString("message", "This is my first message");
+        firstFragment.setArguments(firstBundle);
+
+        HelloFragment secondFragment = new HelloFragment();
+        Bundle secondBundle = new Bundle();
+        secondBundle.putString("message", "This is my second message");
+        secondFragment.setArguments(secondBundle);
+
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.second_frame, fragment, "Hello 2")
+                .add(R.id.first_frame, firstFragment, "Hello 1")
+                .add(R.id.second_frame, secondFragment, "Hello 2")
                 .commit();
     }
 }
