@@ -12,6 +12,14 @@ import android.widget.Toast;
 public class HelloFragment extends Fragment {
 
     private String message = "No initial state";
+    private Listener listener;
+    private View button;
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        listener = (Listener) getActivity();
+    }
 
     @Nullable
     @Override
@@ -29,12 +37,23 @@ public class HelloFragment extends Fragment {
             message = getArguments().getString("message");
         }
 
+        button = view.findViewById(R.id.hello_fragment_button);
         view.findViewById(R.id.hello_fragment_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), message, Toast.LENGTH_LONG)
                         .show();
+                if (listener != null) {
+                    listener.onButtonPressed();
+                }
             }
         });
+
+    }
+
+    public void hideYourButton() {
+        if (button != null) {
+            button.setVisibility(View.INVISIBLE);
+        }
     }
 }

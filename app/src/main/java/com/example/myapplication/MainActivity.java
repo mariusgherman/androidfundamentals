@@ -3,7 +3,8 @@ package com.example.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        Listener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +26,12 @@ public class MainActivity extends AppCompatActivity {
                 .add(R.id.first_frame, firstFragment, "Hello 1")
                 .add(R.id.second_frame, secondFragment, "Hello 2")
                 .commit();
+    }
+
+    @Override
+    public void onButtonPressed() {
+        HelloFragment secondFragment =
+                (HelloFragment) getSupportFragmentManager().findFragmentByTag("Hello 2");
+        secondFragment.hideYourButton();
     }
 }
