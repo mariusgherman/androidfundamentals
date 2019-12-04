@@ -9,5 +9,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        HelloFragment fragment = new HelloFragment();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.second_frame, fragment, "Hello 2")
+                .commit();
     }
 }
