@@ -71,18 +71,23 @@ public class DataSource {
         return null;
     }
 
-    private void saveToDb(List<Person> personList) {
-        PersonDao personDao = personDatabase.personDao();
-        List<PersonEntity> personEntities = new ArrayList<>();
-        for (Person person : personList) {
-            PersonEntity personEntity = new PersonEntity();
-            personEntity.setName(person.getName());
-            personEntity.setSurname(person.getSurname());
-            personEntity.setHomeAddress(person.getHomeAddress());
+    private void saveToDb(final List<Person> personList) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PersonDao personDao = personDatabase.personDao();
+                List<PersonEntity> personEntities = new ArrayList<>();
+                for (Person person : personList) {
+                    PersonEntity personEntity = new PersonEntity();
+                    personEntity.setName(person.getName());
+                    personEntity.setSurname(person.getSurname());
+                    personEntity.setHomeAddress(person.getHomeAddress());
 
-            personEntities.add(personEntity);
-        }
+                    personEntities.add(personEntity);
+                }
 
-        personDao.saveAllPersons(personEntities);
+                personDao.saveAllPersons(personEntities);
+            }
+        }).start();
     }
 }
