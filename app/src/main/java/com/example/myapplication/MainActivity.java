@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DataSource dataSource = new DataSource();
+        DataSource dataSource = new DataSource(this);
         dataSource.getServerDataSource(this);
 
         recyclerView = findViewById(R.id.recyclerView);
