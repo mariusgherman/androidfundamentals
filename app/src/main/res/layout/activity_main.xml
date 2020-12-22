@@ -7,4 +7,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/edit_text_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="State your height"/>
+
+    <Button
+        android:id="@+id/navigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Am i tall enough ?"/>
+
 </LinearLayout>

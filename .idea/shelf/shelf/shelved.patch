@@ -1,0 +1,338 @@
+Index: .idea/codeStyles/Project.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"ProjectCodeStyleConfiguration\">\n  <code_scheme name=\"Project\" version=\"173\">\n    <Objective-C-extensions>\n      <file>\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Import\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Macro\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Typedef\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Enum\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Constant\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Global\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Struct\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"FunctionPredecl\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Function\" />\n      </file>\n      <class>\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Property\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"Synthesize\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"InitMethod\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"StaticMethod\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"InstanceMethod\" />\n        <option name=\"com.jetbrains.cidr.lang.util.OCDeclarationKind\" value=\"DeallocMethod\" />\n      </class>\n      <extensions>\n        <pair source=\"cpp\" header=\"h\" fileNamingConvention=\"NONE\" />\n        <pair source=\"c\" header=\"h\" fileNamingConvention=\"NONE\" />\n      </extensions>\n    </Objective-C-extensions>\n  </code_scheme>\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/Project.xml	(revision 93e2b71da96661a622c0bf31afe97ecffc59d4f5)
++++ .idea/codeStyles/Project.xml	(date 1573662634000)
+@@ -1,29 +1,113 @@
+ <component name="ProjectCodeStyleConfiguration">
+   <code_scheme name="Project" version="173">
+-    <Objective-C-extensions>
+-      <file>
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Import" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Macro" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Typedef" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Enum" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Constant" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Global" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Struct" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="FunctionPredecl" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Function" />
+-      </file>
+-      <class>
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Property" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Synthesize" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InitMethod" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="StaticMethod" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InstanceMethod" />
+-        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="DeallocMethod" />
+-      </class>
+-      <extensions>
+-        <pair source="cpp" header="h" fileNamingConvention="NONE" />
+-        <pair source="c" header="h" fileNamingConvention="NONE" />
+-      </extensions>
+-    </Objective-C-extensions>
++    <codeStyleSettings language="XML">
++      <arrangement>
++        <rules>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>xmlns:android</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>xmlns:.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>BY_NAME</order>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*:id</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*:name</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>name</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>style</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>BY_NAME</order>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>ANDROID_ATTRIBUTE_ORDER</order>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>.*</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>BY_NAME</order>
++            </rule>
++          </section>
++        </rules>
++      </arrangement>
++    </codeStyleSettings>
+   </code_scheme>
+ </component>
+\ No newline at end of file
+Index: app/src/main/java/com/example/myapplication/SecondActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/myapplication/SecondActivity.java	(date 1575476650000)
++++ app/src/main/java/com/example/myapplication/SecondActivity.java	(date 1575476650000)
+@@ -0,0 +1,52 @@
++package com.example.myapplication;
++
++import android.app.Activity;
++import android.content.Intent;
++import android.os.Bundle;
++import android.support.annotation.Nullable;
++import android.support.v7.app.AppCompatActivity;
++import android.view.View;
++import android.widget.EditText;
++import android.widget.TextView;
++
++public class SecondActivity extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(@Nullable Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.second_activity);
++
++        if (savedInstanceState != null) {
++            String text = savedInstanceState.getString("savedString");
++            EditText editText = findViewById(R.id.edittext);
++            editText.setText(text);
++        }
++
++        findViewById(R.id.doneButton).setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                String editTextEntry = ((EditText) findViewById(R.id.edittext)).getText().toString();
++                Intent intent = new Intent();
++                intent.putExtra("result", editTextEntry);
++                setResult(Activity.RESULT_OK, intent);
++
++                finish();
++            }
++        });
++
++
++        if (getIntent().hasExtra("key")) {
++            String newLabel = getIntent().getStringExtra("key");
++            TextView textView = findViewById(R.id.label);
++            textView.setText(newLabel);
++        }
++    }
++
++    @Override
++    protected void onSaveInstanceState(Bundle outState) {
++        super.onSaveInstanceState(outState);
++
++        String editTextEntry = ((EditText) findViewById(R.id.edittext)).getText().toString();
++        outState.putString("savedString", editTextEntry);
++    }
++}
+Index: app/src/main/java/com/example/myapplication/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.myapplication;\n\nimport android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\n\npublic class MainActivity extends AppCompatActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/myapplication/MainActivity.java	(revision 93e2b71da96661a622c0bf31afe97ecffc59d4f5)
++++ app/src/main/java/com/example/myapplication/MainActivity.java	(date 1574877655000)
+@@ -1,7 +1,12 @@
+ package com.example.myapplication;
+ 
++import android.app.Activity;
++import android.content.Intent;
++import android.support.annotation.Nullable;
+ import android.support.v7.app.AppCompatActivity;
+ import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
+ 
+ public class MainActivity extends AppCompatActivity {
+ 
+@@ -9,5 +14,25 @@
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
++
++        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
++                intent.putExtra("key", "new label");
++                startActivityForResult(intent, 10000);
++            }
++        });
++    }
++
++    @Override
++    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
++        super.onActivityResult(requestCode, resultCode, data);
++
++        if (requestCode == 10000 && resultCode == Activity.RESULT_OK) {
++            String result = data.getStringExtra("result");
++            Button button = findViewById(R.id.button);
++            button.setText(result);
++        }
+     }
+ }
+Index: app/src/main/res/layout/second_activity.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/second_activity.xml	(date 1574877415000)
++++ app/src/main/res/layout/second_activity.xml	(date 1574877415000)
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical">
++
++    <TextView
++        android:id="@+id/label"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="Second Activity"
++        android:visibility="gone"/>
++
++    <EditText
++        android:id="@+id/edittext"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"/>
++
++    <Button
++        android:id="@+id/doneButton"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Done" />
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.example.myapplication\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\">\n        <activity android:name=\".MainActivity\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 93e2b71da96661a622c0bf31afe97ecffc59d4f5)
++++ app/src/main/AndroidManifest.xml	(date 1574874254000)
+@@ -16,6 +16,9 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
++
++        <activity android:name=".SecondActivity"/>
++
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<android.support.constraint.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\">\n\n    <TextView\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Hello World!\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintLeft_toLeftOf=\"parent\"\n        app:layout_constraintRight_toRightOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n</android.support.constraint.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 93e2b71da96661a622c0bf31afe97ecffc59d4f5)
++++ app/src/main/res/layout/activity_main.xml	(date 1574874799000)
+@@ -6,13 +6,10 @@
+     android:layout_height="match_parent"
+     tools:context=".MainActivity">
+ 
+-    <TextView
++    <Button
++        android:id="@+id/button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="Hello World!"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++        android:text="Start second"/>
+ 
+ </android.support.constraint.ConstraintLayout>
+\ No newline at end of file
