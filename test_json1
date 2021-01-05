@@ -8,5 +8,70 @@
     "name": "Andy",
     "surname": "Wilson",
     "address": "New York, NY"
+  },
+  {
+    "name": "Andy",
+    "surname": "Anderson",
+    "address": "Austin, TX"
+  },
+  {
+    "name": "Louie",
+    "surname": "Anderson",
+    "address": "San Francisco, CA"
+  },
+  {
+    "name": "Jhonny",
+    "surname": "Silverhand",
+    "address": "Knoxville, TN"
+  },
+  {
+    "name": "Rat",
+    "surname": "Man",
+    "address": "Frankfurt, DE"
+  },
+  {
+    "name": "Andy",
+    "surname": "Warhol",
+    "address": "Paris, FR"
+  },
+  {
+    "name": "Jake",
+    "surname": "Wathon",
+    "address": "Cluj-Napoca, RO"
+  },
+  {
+    "name": "Jude",
+    "surname": "Law",
+    "address": "Hollywood, CA"
+  },
+  {
+    "name": "Santa",
+    "surname": "Clause",
+    "address": "New Orleans, NO"
+  },
+  {
+    "name": "Pac",
+    "surname": "Man",
+    "address": "Wessex, UK"
+  },
+  {
+    "name": "Rainbow",
+    "surname": "Trout",
+    "address": "Oslo, SW"
+  },
+  {
+    "name": "Snoop",
+    "surname": "Dog",
+    "address": "Bucharest, RO"
+  },
+  {
+    "name": "Wu",
+    "surname": "Tang",
+    "address": "New York, NY"
+  },
+  {
+    "name": "Jessica",
+    "surname": "Alba",
+    "address": "Nowhere, HR"
   }
 ]
