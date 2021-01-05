@@ -2,21 +2,19 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecycleViewHolder> {
 
-
-    private final List<String> data;
-
-    public RecyclerViewAdapter(List<String> data) {
-        this.data = data;
-    }
+    private List<Person> data = new ArrayList<>();
 
     @NonNull
     @Override
@@ -28,13 +26,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecycleViewHolder recycleViewHolder, int position) {
-        String carmake = data.get(position);
-        recycleViewHolder.carMakeTextView.setText(carmake);
+        String name = data.get(position).getName();
+        recycleViewHolder.carMakeTextView.setText(name);
     }
 
     @Override
     public int getItemCount() {
         return data.size();
+    }
+
+    public void setData(List<Person> personList) {
+        data.clear();
+        data.addAll(personList);
+
+        notifyDataSetChanged();
+        Log.d("tag", "Number of items " + data.size());
     }
 
     public static class RecycleViewHolder extends RecyclerView.ViewHolder {
