@@ -1,9 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.util.Log;
-import android.widget.ListView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -14,7 +13,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DataSource {
 
+    private final Context context;
+
     private static Retrofit retrofit;
+
+    public DataSource(Context context) {
+        this.context = context;
+    }
 
     public static Retrofit getRetrofit() {
         if (retrofit == null) {
@@ -35,13 +40,30 @@ public class DataSource {
                     public void onResponse(Call<List<Person>> call, Response<List<Person>> response) {
                         if (response.isSuccessful()) {
                             Log.d("tag", "response was successful");
-                            listener.onPersonsFetchedFromServer(response.body());
+                            List<Person> personList = response.body();
+                            listener.onPersonsFetchedFromServer(personList);
+
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    AppDatabase.getDatabase(context).personDao().deleteAll();
+                                    AppDatabase.getDatabase(context).personDao().insertAllPersons(personList);
+                                }
+                            }).start();
+
                         }
                     }
 
                     @Override
                     public void onFailure(Call<List<Person>> call, Throwable throwable) {
                         Log.d("tag", "response was failed");
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                List<Person> people = AppDatabase.getDatabase(context).personDao().getPersons();
+                                listener.onPersonsFetchedFromServer(people);
+                            }
+                        }).start();
                     }
                 });
     }

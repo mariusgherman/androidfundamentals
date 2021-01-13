@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -26,12 +25,17 @@ public class MainActivity extends AppCompatActivity implements PersonListener {
         recyclerViewAdapter = new RecyclerViewAdapter();
         recyclerView.setAdapter(recyclerViewAdapter);
 
-        DataSource dataSource = new DataSource();
+        DataSource dataSource = new DataSource(this);
         dataSource.getPersons(this);
     }
 
     @Override
     public void onPersonsFetchedFromServer(List<Person> personList) {
-        recyclerViewAdapter.setData(personList);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                recyclerViewAdapter.setData(personList);
+            }
+        });
     }
 }
