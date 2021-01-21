@@ -8,6 +8,7 @@
     tools:context=".LoginActivity">
 
     <EditText
+        style="@style/MyCustomTextStyle"
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        style="@style/MyCustomTextStyle"
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
